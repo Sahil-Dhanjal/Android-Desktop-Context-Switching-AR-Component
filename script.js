@@ -13,27 +13,29 @@
 const userAgent = detect.parse(navigator.userAgent);
 
 // Creating a variable for our button
-const button = document.querySelector("#mainButton");
+const button = document.getElementById("mainButton");
 
 // Creating a variable for accessing our paragraph tag
 const paragraph = document.querySelector("p");
 
 // This below will result into a null value if you use a browser (Desktop is what being talked about in here) to run this website and not some device - Android or say iOS device.
-device = userAgent.device;
+// device = userAgent.device;
 console.log(userAgent.device);
 
 // This below will tall you about the browser being used to open this website.
 console.log(userAgent.browser.family);
 
 // Writing a conditional for what happens if the user open the Website on an iphone
-if (device !== null) {
-  if (userAgent.browser.family === "iphone") {
-    paragraph.textContent = "This site has been opened using an iphone!";
-  } else if (userAgent.browser.family === "android") {
-    paragraph.textContent =
-      "This site has been opened using an Android device!";
-  } else {
-    paragraph.textContent =
-      "You can only run this application on a browser using your Mobile Device. We're really sorry for the incovenience caused.";
-  }
+// if (device !== null) {
+if (userAgent.browser.family === "iPhone") {
+  button.textContent = "This site has been opened using an iphone!";
+} else if (userAgent.browser.family === "Chrome Mobile") {
+  button.textContent = "This site has been opened using an Android device!";
+} else if (userAgent.browser.family === "Chrome") {
+  button.textContent =
+    "You can only run this application on a browser using your Mobile Device. We're really sorry for the incovenience caused.";
 }
+// } else {
+//   button.textContent =
+//     "You can only run this application on a browser using your Mobile Device. We're really sorry for the incovenience caused.";
+// }
