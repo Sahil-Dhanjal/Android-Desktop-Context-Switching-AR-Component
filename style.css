@@ -1,0 +1,18 @@
+#mainButton {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.mainHeading {
+  text-align: center;
+  margin: 50px;
+  font-size: 100px;
+}
+
+.containerWithTheButton {
+  text-align: center;
+  margin: auto;
+}
