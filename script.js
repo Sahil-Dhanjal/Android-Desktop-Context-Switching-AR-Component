@@ -11,6 +11,12 @@
 
 // The Navigator.userAgent read-only property returns the user agent string for the current browser.
 const userAgent = detect.parse(navigator.userAgent);
+// console.table(navigator.userAgent);
+// console.log(typeof navigator.userAgent);
+console.log(userAgent);
+
+userAgentfamily = userAgent.family;
+userAgentDevice = userAgent.isMobile;
 
 // Creating a variable for our button
 const button = document.getElementById("mainButton");
@@ -27,15 +33,13 @@ console.log(userAgent.browser.family);
 
 // Writing a conditional for what happens if the user open the Website on an iphone
 // if (device !== null) {
-if (userAgent.browser.family === "iPhone") {
-  button.textContent = "This site has been opened using an iphone!";
-} else if (userAgent.browser.family === "Chrome Mobile") {
-  button.textContent = "This site has been opened using an Android device!";
-} else if (userAgent.browser.family === "Chrome") {
-  button.textContent =
-    "You can only run this application on a browser using your Mobile Device. We're really sorry for the incovenience caused.";
-}
-// } else {
+// if (userAgent.browser.family === "Mobile Safari") {
+//   button.textContent = "This site has been opened using an iphone!";
+// } else if (userAgent.browser.family === "Chrome Mobile") {
+//   button.textContent = "This site has been opened using an Android device!";
+// } else if (userAgent.browser.family === "Chrome") {
 //   button.textContent =
 //     "You can only run this application on a browser using your Mobile Device. We're really sorry for the incovenience caused.";
 // }
+
+button.textContent = userAgentfamily;
