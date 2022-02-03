@@ -9,13 +9,6 @@
     <!-- Externally linking the 'style.css' CSS file -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Externally linking the 'detect.min.js' Javascript file -->
-    <script src="detect.min.js"></script>
-
-    <!-- Externally linking my own 'script.js' Javascript file -->
-    <!-- RequireJS can be initialized by passing the main configuration in the HTML template through the data-main attribute. It is used by RequireJS to know which module to load in your application -->
-    <script src="script.js"></script>
-
     <title>Restaurant AR Application</title>
 </head>
 
@@ -28,8 +21,14 @@
         <button id="mainButton" href='#'>Click here to see your AR Dish!</button>
     </div>
 
-    <!-- This paragraph tab would be used to populate it with the text for wehat device the user has been using -->
-    <p></p>
+    <!-- Externally linking the 'detect.min.js' Javascript file -->
+    <script src="./detect.min.js"></script>
+
+    <!-- Externally linking my own 'script.js' Javascript file -->
+    <script src="./script.js"></script>
+
+    <!-- This paragraph tab would be used to populate it with the text for what device the user has been using -->
+    <p>This tells you about your device.</p>
 
 </body>
 
